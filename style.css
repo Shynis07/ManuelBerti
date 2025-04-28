@@ -185,6 +185,7 @@ align-items: center;
 }
 .t1{
 font-size: 50px;
+margin-top: 30px;
 }
 .t2{
     margin-top: 50px;
@@ -375,3 +376,162 @@ a:visited{
     }
   }
 
+/* Reset dei margini e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body con margini fluidi */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  color: rgb(196, 195, 195);
+  background-color: rgb(19, 19, 19);
+}
+
+/* Spaziatura generica */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px; /* Aggiungiamo padding per evitare che il testo tocchi i bordi */
+}
+
+/* La navbar che prende tutta la larghezza della pagina */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+  background-color: rgb(19, 19, 19);
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Assicurati che il testo non vada a toccare i bordi */
+.nome {
+  margin-left: 0; /* Aggiungi margine a sinistra */
+  margin-right: 0; /* Aggiungi margine a destra */
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+/* Preveniamo il testo troppo allineato a sinistra */
+h2, p {
+  text-align: center;
+}
+h2 {
+  margin-bottom: 20px; /* Distanza tra il titolo e il testo */
+  font-size: 2.5rem; /* Font più grande per titoli */
+}
+
+p {
+  margin-bottom: 20px; /* Distanza tra il paragrafo e il prossimo elemento */
+  font-size: 1.2rem; /* Font più leggibile */
+}
+.profilo {
+  width: 100%; /* Per schermi più piccoli, prendiamo tutta la larghezza */
+  max-width: 250px; /* Limita la larghezza massima */
+  margin: 10px auto; /* Margini automatici per centrarla */
+}
+
+/* Immagini nella sezione esempi, rendiamole fluide */
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+/* Aggiungiamo un po' di padding alle celle */
+.tabella td, .tabella th {
+  padding: 8px;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .tabella {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tabella th, .tabella td {
+    display: block;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* Navbar su mobile */
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  /* Immagine del profilo */
+  .profilo {
+    width: 70%;
+    max-width: 200px;
+    margin-top: 20px;
+  }
+
+  /* Titoli e testo più piccoli su mobile */
+  .t1 {
+    font-size: 2rem;
+  }
+
+  .t2 {
+    font-size: 1.5rem;
+  }
+
+  .t3 {
+    font-size: 1rem;
+  }
+
+  /* Container per le immagini */
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ridurre la larghezza delle immagini nelle carte */
+  .image-wrapper img {
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Navbar ancora più compatta */
+  .navbar {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  /* Testo più piccolo su schermi molto piccoli */
+  .t1 {
+    font-size: 1.5rem;
+  }
+
+  .t2 {
+    font-size: 1.2rem;
+  }
+
+  .t3 {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+
+  /* Container con meno spazio */
+  .container {
+    margin-top: 2rem;
+  }
+
+  .image-wrapper {
+    width: 90%;
+  }
+}
